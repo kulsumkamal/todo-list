@@ -1,10 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("./components/res/pink-glitter-background.jpg");
+}
+
+.head-background {
+  background-color: rgba(66, 31, 38, 0.605);
+}
+
+.edit-task-input {
+  background-color: azure;
+  display: inline-block;
+  width: 200px;
+  margin-left: 10px;
+}
+
+.heading {
+  text-align: center; 
+  color: azure;
+  font-family:'Poppins', sans-serif;;
+}
+
+.todo-list {
+  background-color: rgb(229, 194, 215);
+  margin: 10px;
+  height: fit-content;
+  width: 800px;
+  font-family: 'Crafty Girls', cursive;
+  list-style: none;
+  position: relative;
+}
+
+.todo-list-container {
+  background-color: rgb(229, 194, 215);
+  display: block;
+  margin: auto;
+  height: fit-content;
+  width: 850px;
+  font-family: 'Crafty Girls', cursive;
+  list-style: none;
+  position: relative;
+}
+
+.submitBtn {
+  font-size: 20px;
+  padding-left: 10px;
+  background-color: rgb(255, 79, 79);
+  margin: auto;
+  display: block;
+  width: 515px;
+}
+
+.taskCheck:checked + .taskLabel {
+  text-decoration: line-through;
+}
+
+.taskCheck {
+  height: 15px;
+  width: 15px;
+}
+
+input[type="text"]
+{
+    font-size:20px;
+    background-color: rgb(185, 185, 185);
+    font-family: 'Segoe UI';
+    padding-left: 10px;
+    color: black;
+}
+input{
+  margin: auto;
+  display: block;
+  width: 500px;
+}
+
+addTask {
+  background-color: antiquewhite;
+  font-size: 20px;
+  margin: 10px;
+  width: 100px;
+  font-family: 'Segoe Print';
+  list-style: none;
+  position: relative;
+}
+
+.Task {
+  background-color: antiquewhite;
+  margin: 10px;
+  height: fit-content;
+  width: 500px;
+  font-family: 'Segoe UI';
+  position: relative;
+}
+
+.Task-Heading {
+  font-family: 'Poppins', sans-serif;
+  font-style: bold;
+  font-size: x-large;
+  padding: 5px;
+  border-bottom: 5px double rgb(168, 8, 150);
+}
+
+.divider {
+  border-top: 5px double rgb(168, 8, 150);
+}
+
+li input[type="checkbox"] {
+  display: inline-block;
+  width: fit-content;
+}
+
+li input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+li label {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+li .deleteBtn {
+  background-color: transparent;
+  display: inline-block;
+  float: right;
+}
+
+li .deleteBtn:hover {
+  cursor: pointer;
+}
+
+.left-divider {
+  border-left: 1px double rgb(168, 8, 150);
+  border-right: 1px solid rgb(168, 8, 150);
+  width: 2px;
+  float: left;
+  height: fit-content;
+  margin-left: 40px;
+}
+
+li {
+  font-size: 20px;
+  padding-left: 10px;
+  border-left: 5px double rgb(168, 8, 150);
+  border-bottom: 1px solid black;
+}
+
+.pencil {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+.edit-task:hover {
+  cursor: pointer;
+  animation: spin 1s infinite;
+  animation-direction: alternate;
+}
+
+.edit-task {
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  background: transparent;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.edit-task-grp {
+  display: none;
+  font-size: 15px;
+}
+
+@keyframes spin {
+  50% {transform: rotate(60deg)}
 }
 
 @media (prefers-reduced-motion: no-preference) {
